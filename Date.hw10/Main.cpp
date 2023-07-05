@@ -1,38 +1,40 @@
 #include <iostream>
 #include "Date.h"
 
+using namespace std;
+
 int main() {
     // Створення об'єкта Date
     Date date(1, 1, 2022);
 
     // Виведення дати
-    std::cout << "Початкова дата: " << date << std::endl;
+    cout << "Початкова дата: " << date << endl;
 
     // Збільшення дня на 1
     date.incrementDay();
 
     // Виведення дати після збільшення дня
-    std::cout << "Дата після збільшення дня: " << date << std::endl;
+    cout << "Дата після збільшення дня: " << date << endl;
 
     // Перевантаження операцій ++
     date++;
-    std::cout << "Дата після перевантаження оператора ++: " << date << std::endl;
+    cout << "Дата після перевантаження оператора ++: " << date << endl;
 
     // Перевантаження операцій +=
     date += 5;
-    std::cout << "Дата після перевантаження оператора +=: " << date << std::endl;
+    cout << "Дата після перевантаження оператора +=: " << date << endl;
 
     // Перетворення до int (отримання довжини рядка)
     int length = static_cast<int>(date);
-    std::cout << "Довжина рядка: " << length << std::endl;
+    cout << "Довжина рядка: " << length << endl;
 
     // Перевірка на рівність двох дат
     Date otherDate(5, 1, 2022);
     if (date == otherDate) {
-        std::cout << "Дати рівні" << std::endl;
+        cout << "Дати рівні" << endl;
     }
     else {
-        std::cout << "Дати не рівні" << std::endl;
+        cout << "Дати не рівні" << endl;
     }
 
     return 0;
