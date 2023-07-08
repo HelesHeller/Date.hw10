@@ -1,9 +1,12 @@
 #include <iostream>
 #include "Date.h"
+#include "windows.h"
 
 using namespace std;
 
 int main() {
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
     // Створення об'єкта Date
     Date date(1, 1, 2022);
 
@@ -25,7 +28,7 @@ int main() {
     cout << "Дата після перевантаження оператора +=: " << date << endl;
 
     // Перетворення до int (отримання довжини рядка)
-    int length = static_cast<int>(date);
+    int length = date.getLengthOfString();//тут
     cout << "Довжина рядка: " << length << endl;
 
     // Перевірка на рівність двох дат

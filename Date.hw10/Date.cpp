@@ -1,4 +1,5 @@
 #include "Date.h"
+#include "String"//тут
 
 Date::Date() : day(1), month(1), year(2000) {}
 
@@ -166,4 +167,10 @@ Date Date::operator--(int) {
 
 bool Date::operator!() const {
     return (day == 0 && month == 0 && year == 0);
+}
+
+int Date::getLengthOfString() const//тут
+{
+    std::string dateString = std::to_string(day) + "/" + std::to_string(month) + "/" + std::to_string(year);
+    return dateString.length();
 }

@@ -30,6 +30,7 @@ public:
     Date operator--();
     Date operator--(int);
     bool operator!() const;
+    int getLengthOfString() const;//тут
 };
 
 #endif
